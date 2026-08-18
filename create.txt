@@ -48,7 +48,7 @@ local function notify(message)
         Icon = "rbxassetid://77466135328105" -- << เปลี่ยนเป็น ID รูปภาพที่คุณต้องการ
     })
 end
-notify("SP HUB Run! by Blackpop Enjoy!")
+notify("SP HUB Run! by SUPPORT SP Enjoy!")
 
 แจ้งเตือนเว็บฮุกดิสคอร์ด
 
