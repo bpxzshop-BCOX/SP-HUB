@@ -1,1 +1,97 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#030817" />
+  <title>SP HUB</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: #030817;
+      font-family: Arial, "Noto Sans Thai", sans-serif;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: url("https://i.pinimg.com/736x/cd/55/ca/cd55ca581c6f7dde498ed9be4bb16d14.jpg") center / cover no-repeat;
+      filter: hue-rotate(125deg) saturate(1.18) contrast(1.12) brightness(.72);
+      transform: scale(1.04);
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(circle, rgba(57,169,255,.15), transparent 42%), rgba(2,8,23,.48);
+      backdrop-filter: blur(2px);
+    }
+    #copyButton {
+      border: 1px solid rgba(255,255,255,.38);
+      border-radius: 16px;
+      padding: 17px 28px;
+      color: #061429;
+      background: #f0faff;
+      box-shadow: 0 15px 45px rgba(0,0,0,.32), 0 0 34px rgba(57,169,255,.38);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: .01em;
+      cursor: pointer;
+      transition: transform .16s ease, background .16s ease, box-shadow .16s ease;
+    }
+    #copyBox {
+      width: min(92vw, 700px);
+      display: grid;
+      justify-items: center;
+      gap: 15px;
+    }
+    #scriptText {
+      width: 100%;
+      margin: 0;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border: 1px solid rgba(133, 207, 255, .34);
+      border-radius: 16px;
+      background: rgba(2, 12, 29, .74);
+      color: #d3efff;
+      box-shadow: 0 16px 44px rgba(0,0,0,.28);
+      font: 12px/1.7 "Courier New", monospace;
+      white-space: pre;
+      backdrop-filter: blur(9px);
+    }
+    #scriptText .comment { color: #71c9ff; }
+    #scriptText .function { color: #84f1d3; }
+    #scriptText .url { color: #d1b8ff; }
+    #copyButton:hover { background: #83ceff; box-shadow: 0 18px 52px rgba(0,0,0,.4), 0 0 48px rgba(57,169,255,.55); }
+    #copyButton:active { transform: scale(.96); }
+  </style>
+</head>
+<body>
+  <main id="copyBox">
+    <pre id="scriptText"><span class="comment">-- เปลี่ยน URL เป็นสคริปต์ของคุณก่อนใช้</span>
+<span class="function">loadstring</span>(<span class="function">game:HttpGet</span>(<span class="url">"https://example.com/your-script.lua"</span>))()</pre>
+    <button id="copyButton">คัดลอกสคริปต์</button>
+  </main>
+  <script>
+    const script = 'loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/SP.lua"), true))()';
+    const button = document.getElementById('copyButton');
 
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(script);
+        button.textContent = 'คัดลอกแล้ว ✓';
+        setTimeout(() => { button.textContent = 'คัดลอกสคริปต์'; }, 1800);
+      } catch {
+        button.textContent = 'คัดลอกไม่สำเร็จ';
+        setTimeout(() => { button.textContent = 'คัดลอกสคริปต์'; }, 1800);
+      }
+    });
+  </script>
+</body>
+</html>
