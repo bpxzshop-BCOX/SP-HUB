@@ -21,7 +21,6 @@
       inset: 0;
       z-index: -2;
       background: url("https://i.pinimg.com/736x/cd/55/ca/cd55ca581c6f7dde498ed9be4bb16d14.jpg") center / cover no-repeat;
-      filter: hue-rotate(125deg) saturate(1.18) contrast(1.12) brightness(.72);
       transform: scale(1.04);
     }
     body::after {
@@ -74,8 +73,8 @@
 </head>
 <body>
   <main id="copyBox">
-    <pre id="scriptText"><span class="comment">-- เปลี่ยน URL เป็นสคริปต์ของคุณก่อนใช้</span>
-<span class="function">loadstring</span>(<span class="function">game:HttpGet</span>(<span class="url">"https://example.com/your-script.lua"</span>))()</pre>
+    <pre id="scriptText"><span class="comment">-- สคริปต์ของคุณ</span>
+<span class="function">loadstring</span>(<span class="function">game:HttpGet</span>((<span class="url">"https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/SP.lua"</span>), <span class="function">true</span>))()</pre>
     <button id="copyButton">คัดลอกสคริปต์</button>
   </main>
   <script>
