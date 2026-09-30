@@ -1,7 +1,7 @@
 --[[ เปิดมาอ่านหาพ่อมึงอ่อไอหน้าปลาดุก ]]--
 local placeId = game.PlaceId
 local bloxfruit = {
-    [2753915549] = true,
+    [85211729168715] = true,
     [4442272183] = true,
     [7449423635] = true,
 }
