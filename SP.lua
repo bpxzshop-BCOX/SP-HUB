@@ -2,8 +2,9 @@
 local placeId = game.PlaceId
 local bloxfruit = {
     [85211729168715] = true,
-    [4442272183] = true,
-    [7449423635] = true,
+    [79091703265657] = true,
+    [100117331123089] = true,
+    [73902483975735] = true,
 }
 local bladeball = {
     [13772394625] = true,
