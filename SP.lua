@@ -5,7 +5,25 @@ local bloxfruit = {
     [4442272183] = true,
     [7449423635] = true,
 }
+local bladeball = {
+    [13772394625] = true,
+}
 
 if bloxfruit[placeId] then
-  loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Blox%20Fruit/SP.lua"), true))()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Blox%20Fruit/SP.lua"), true))()
+elseif bladeball[placeId] then
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Blade%20Ball/SP.lua"), true))()
+else
+    local StarterGui = game:GetService("StarterGui")
+    local function notify(message)
+        StarterGui:SetCore("SendNotification", {
+            Title = "ไม่รองรับแมพนี้";
+            Text = message;
+            Duration = 5;
+            Icon = "rbxassetid://84283763194213"
+        })
+    end
+    notify("SP HUB")
 end
+
+-- loadstring(game:HttpGet((""), true))()
