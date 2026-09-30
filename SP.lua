@@ -12,6 +12,9 @@ local bladeball = {
 local prisonlife = {
     [155615604] = true,
 }
+local mm2 = {
+    [142823291] = true,
+}
 
 if bloxfruit[placeId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Blox%20Fruit/SP.lua"), true))()
@@ -19,6 +22,8 @@ elseif bladeball[placeId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Blade%20Ball/SP.lua"), true))()
 elseif prisonlife[placeId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Prison%20Life/SP.lua"), true))()
+elseif mm2[placeId] then
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/MM2/SP.lua"), true))()
 else
     local StarterGui = game:GetService("StarterGui")
     local function notify(message)
