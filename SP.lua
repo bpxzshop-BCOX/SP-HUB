@@ -23,7 +23,7 @@ else
     local StarterGui = game:GetService("StarterGui")
     local function notify(message)
         StarterGui:SetCore("SendNotification", {
-            Title = "ไม่รองรับแมพนี้";
+            Title = "ไม่รองรับแมพนี้ หรือเกิดข้อผิดพลาด";
             Text = message;
             Duration = 5;
             Icon = "rbxassetid://84283763194213"
