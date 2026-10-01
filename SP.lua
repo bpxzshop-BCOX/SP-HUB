@@ -1,8 +1,6 @@
 --[[ เปิดมาอ่านหาพ่อมึงอ่อไอหน้าปลาดุก ]]--
 local placeId = game.PlaceId
-local bloxfruit = {
-    [2753915549] = true,
-}
+
 local bladeball = {
     [13772394625] = true,
 }
@@ -15,9 +13,7 @@ local mm2 = {
 
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/W.lua"), true))()
 
-if bloxfruit[placeId] then
-    loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Blox%20Fruit/SP.lua"), true))()
-elseif bladeball[placeId] then
+if bladeball[placeId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Blade%20Ball/SP.lua"), true))()
 elseif prisonlife[placeId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Prison%20Life/SP.lua"), true))()
