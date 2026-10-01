@@ -1,10 +1,7 @@
 --[[ เปิดมาอ่านหาพ่อมึงอ่อไอหน้าปลาดุก ]]--
 local placeId = game.PlaceId
 local bloxfruit = {
-    [85211729168715] = true,
-    [79091703265657] = true,
-    [100117331123089] = true,
-    [73902483975735] = true,
+    [2753915549] = true,
 }
 local bladeball = {
     [13772394625] = true,
@@ -16,6 +13,8 @@ local mm2 = {
     [142823291] = true,
 }
 
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/W.lua"), true))()
+
 if bloxfruit[placeId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Blox%20Fruit/SP.lua"), true))()
 elseif bladeball[placeId] then
@@ -24,7 +23,7 @@ elseif prisonlife[placeId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Prison%20Life/SP.lua"), true))()
 elseif mm2[placeId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/MM2/SP.lua"), true))()
-else
+    else
     local StarterGui = game:GetService("StarterGui")
     local function notify(message)
         StarterGui:SetCore("SendNotification", {
