@@ -1,33 +1,38 @@
 --[[ เปิดมาอ่านหาพ่อมึงอ่อไอหน้าปลาดุก ]]--
-local placeId = game.PlaceId
+local GameId = game.GameId
 
+local bloxfruits = {
+    [994732206] = true,
+}
 local bladeball = {
-    [13772394625] = true,
+    [4777817887] = true,
 }
 local prisonlife = {
-    [155615604] = true,
+    [73885730] = true,
 }
 local mm2 = {
-    [142823291] = true,
+    [66654135] = true,
 }
 
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/W.lua"), true))()
 
-if bladeball[placeId] then
+if bloxfruits[GameId] then
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Blox%20Fruit/SP.lua"), true))()
+elseif bladeball[GameId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Blade%20Ball/SP.lua"), true))()
-elseif prisonlife[placeId] then
+elseif prisonlife[GameId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/Prison%20Life/SP.lua"), true))()
-elseif mm2[placeId] then
+elseif mm2[GameId] then
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/bpxzshop-BCOX/SP-HUB/refs/heads/main/MM2/SP.lua"), true))()
-    else
+else
     local StarterGui = game:GetService("StarterGui")
     local function notify(message)
         StarterGui:SetCore("SendNotification", {
-            Title = "ไม่รองรับแมพนี้ หรือเกิดข้อผิดพลาด";
-            Text = message;
-            Duration = 5;
-            Icon = "rbxassetid://84283763194213"
-        })
+        Title = "ไม่รองรับแมพนี้ หรือเกิดข้อผิดพลาด";
+        Text = message;
+        Duration = 5;
+        Icon = "rbxassetid://84283763194213"
+    })
     end
     notify("SP HUB")
 end
